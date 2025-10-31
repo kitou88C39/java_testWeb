@@ -1,3 +1,5 @@
+import java.io.IOException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,19 +19,18 @@ public class App1Servlet extends HttpServlet {
         String params3 = request.getParameter("param3");
 
         // Htmlを作成する処理
-        String html = "<html>";
+        String html = "<html>"
                 + "<body>"
-                + "パラメータ名:params1 値: " + params1 + "<br>"
-                + "パラメータ名:params2 値: " + params2 + "<br>"
-                + "パラメータ名:params3 値: " + params3 + "<br>"
+                + "パラメータ名:params1 値: " + params1 + "<br />"
+                + "パラメータ名:params2 値: " + params2 + "<br />"
+                + "パラメータ名:params3 値: " + params3 + "<br />"
                 + "</body>"
                 + "</html>";
-        //レスポンスのヘッダーに、MIMEタイプ、文字コードをセット
+        // レスポンスのヘッダーに、MIMEタイプ、文字コードをセット
         response.setContentType("test/html");
         response.setCharacterEncoding("UTF-8");
 
-        //作成したHTMLを出力
-        response.getWriter().println(html);
+        // 作成したHTMLを出力
+        response.getWriter().append(html);
     }
-
 }
