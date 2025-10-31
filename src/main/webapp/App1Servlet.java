@@ -24,7 +24,12 @@ public class App1Servlet extends HttpServlet {
                 + "パラメータ名:params3 値: " + params3 + "<br>"
                 + "</body>"
                 + "</html>";
+        //レスポンスのヘッダーに、MIMEタイプ、文字コードをセット
+        response.setContentType("test/html");
+        response.setCharacterEncoding("UTF-8");
 
+        //作成したHTMLを出力
+        response.getWriter().println(html);
     }
 
 }
