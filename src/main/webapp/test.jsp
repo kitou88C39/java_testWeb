@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html;charset="UTF-8"
-pageEnconding="UTF-8"%> //スクリプトレット <% int a = 1; int b = 2; int c = a +
-b; %>
+pageEnconding="UTF-8"%> //パラメータの所得　<%String str =
+request.getParameter("param1");%>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,6 +10,6 @@ b; %>
   </head>
   <body>
     <h1>Hello World!</h1>
-    1たす5は　//スクリプト式<%=c %>です<br />
+    パラメータは<%=str %>です<br />
   </body>
 </html>
