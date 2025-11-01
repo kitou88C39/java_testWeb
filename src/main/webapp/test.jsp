@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html;charset="UTF-8"
-pageEnconding="UTF-8"%> //パラメータの所得　<%String str =
-request.getParameter("param1");%>
+pageEnconding="UTF-8"%> 
+String str = ["昭和","平成","令和"];
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,7 +10,10 @@ request.getParameter("param1");%>
   </head>
   <body>
     <h1>Hello World!</h1>
-    <% if (str! == null) {%> パラメータは<%=str %>です<br />
-    <% } else { %> パラメータはありません <% } %>
-  </body>
+    
+    <% for(int i=0; i<strs.length; i++>) {%>
+        <% strs[i] %>
+    <% }%>
+
+    </body>
 </html>
