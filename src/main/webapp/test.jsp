@@ -10,6 +10,7 @@ request.getParameter("param1");%>
   </head>
   <body>
     <h1>Hello World!</h1>
-    パラメータは<%=str %>です<br />
+    <% if (str! == null) {%> パラメータは<%=str %>です<br />
+    <% } else { %> パラメータはありません <% } %>
   </body>
 </html>
