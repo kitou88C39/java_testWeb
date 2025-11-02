@@ -1,21 +1,13 @@
 <%@ page language="java" contentType="text/html;charset="UTF-8"
 pageEnconding="UTF-8"%> 
 
-<% page import="yurufuwa.prg.sample.Calc" %>
+<% page import="java.util.ArrayList" %>
+<% page import="yuryfuwa.prg.sample.Todofuken" %>
 
-<%
-//パラメータの取得
-String sX = request.getParameter("x");
-String sY = request.getParameter("y");
+//都道府県のリストを取得
+Todofuken todoufuken = new Todofuken();
+ArrayList<String> todoufukenList = td.getList();
 
-int x = Integer.parseInt(sX);
-int y = Integer.parseInt(sY);
-
-//計算機クラスにパラメータをセット
-Calc calc = new Calc();
-calc.setX(x);
-calc.setY(y);
-%>
 
 <!DOCTYPE html>
 <html lang="ja">
