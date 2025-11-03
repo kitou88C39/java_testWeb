@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class App2 extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response
-                                            throws ServletException, IOException) {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+                                            throws ServletException, IOException {
 
         // パラメータ取得
         String params1 = request.getParameter("str1");
@@ -29,7 +29,7 @@ public class App2 extends HttpServlet {
                 + "</body>"
                 + "</html>";
         // レスポンスのヘッダーに、MIMEタイプ、文字コードをセット
-        response.setContentType("test/html");
+        response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
 
         // 作成したHTMLを出力
