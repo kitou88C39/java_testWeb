@@ -2,6 +2,8 @@ package yurufuwa.prog.sample;
 
 import java.io.IOException;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,5 +28,10 @@ public class App2 extends HttpServlet {
 
         // 結合結果を取得
         String answer = c.getAnswer();
+
+        // ビュー(JSP)に結果を出力してもらう
+        ServletContext ctx = getServletContext();
+        RequestDispatcher rd = ctx.getRequestDispatcher("/WEB-INF/join.jsp");
+        rd.forward(request, response);
     }
 }
