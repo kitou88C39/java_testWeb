@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 //HttpServletを継承して作る
-public class App1Servlet extends HttpServlet {
+public class App1 extends HttpServlet {
     // スーパークラス(HttpServlet)のコンストラクタを呼び出す
     public App1Servlet() {
         super();
