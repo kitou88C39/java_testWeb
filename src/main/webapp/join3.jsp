@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html;charset="UTF-8"
-pageEnconding="UTF-8"%> <% //結合結果をリクエストから取得 String ans =
-(String)request.getAttribute("ans"); %>
+pageEnconding="UTF-8"%> <%@ page import="yurufuwa.prog.sample.Concat" %> <%
+//モデルからリクエストから取得 Concat c =
+(Concat)request.getAttribute("result"); %>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,6 +11,6 @@ pageEnconding="UTF-8"%> <% //結合結果をリクエストから取得 String a
   </head>
   <body>
     文字列の結合結果: <br />
-    <%= ans %>
+    <%= c.getAnswer() %>
   </body>
 </html>
