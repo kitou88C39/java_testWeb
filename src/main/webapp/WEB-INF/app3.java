@@ -17,8 +17,8 @@ public class App3 extends HttpServlet {
             throws ServletException, IOException {
 
         // パラメータ取得
-        String params1 = request.getParameter("str1");
-        String params2 = request.getParameter("str2");
+        String str1 = request.getParameter("str1");
+        String str2 = request.getParameter("str2");
 
         // モデルで文字列結合
         Concat c = new Concat();
@@ -26,8 +26,8 @@ public class App3 extends HttpServlet {
         c.setStr2(str2);
         c.join();
 
-        // 結合結果を取得
-        String answer = c.getAnswer();
+        // モデルをリクエストにセット
+        request.setAttribute("result", c);
 
         // ビュー(JSP)に結果を出力してもらう
         ServletContext ctx = getServletContext();
